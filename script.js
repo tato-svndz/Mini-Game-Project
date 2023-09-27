@@ -1,3 +1,9 @@
+document.addEventListener('touchstart', function(event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, { passive: false });
+
 let count = 0;
 let timeLeft = 5 * 1000; // 5 seconds in milliseconds
 let button = document.getElementById('tap-btn');
